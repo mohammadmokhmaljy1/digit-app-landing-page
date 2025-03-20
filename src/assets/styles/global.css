@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+html{
+    direction: rtl;
+}
+*{transition: all 0.3s;}
+
+:root {
+    --primary-color: #0065b8;
+    --secondary-color: #f6993f;
+    --text-color: #222;
+}
+
+.btn{
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 2px solid transparent;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn svg{
+    width: 18px;
+}
+
+.btn-reverse{
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+@media (max-width: 700px) {   
+    .sider-btn{
+        display: block;
+    }
+    header nav{
+        display: none;
+    }
+    aside{
+        height: 160px;
+    }
+    aside a{
+        animation: coming 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1;
+        animation-fill-mode: forwards;
+        transform: translateX(-100%);
+    }
+    aside a:nth-child(1) { animation-delay: 0s; }
+    aside a:nth-child(2) { animation-delay: 0.1s; }
+    aside a:nth-child(3) { animation-delay: 0.2s; }
+    aside a:nth-child(4) { animation-delay: 0.3s; }
+}
+@media (min-width: 700px) {   
+    .sider-btn{
+        display: none;
+    }
+    header nav{
+        display: block;
+    }
+    aside {
+        height: 0;
+        display: none;
+    }
+}
+
+@keyframes coming {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+svg{
+    display: inline;
+}
+
+.card svg{
+    width: 36px;
+    text-align: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: lightblue;
+    padding: 8px;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+footer svg{
+    width: 20px;
+}
