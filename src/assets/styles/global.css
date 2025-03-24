@@ -1,14 +1,11 @@
 @import "tailwindcss";
 
-html{
-    direction: rtl;
-}
 *{transition: all 0.3s;}
 
 :root {
-    --primary-color: #0065b8;
-    --secondary-color: #f6993f;
-    --text-color: #222;
+    --primary-color: #EDB702;
+    --secondary-color: #4F4F4F;
+    --text-color: #000;
 }
 
 .btn{
@@ -92,7 +89,7 @@ svg{
     text-align: center;
     aspect-ratio: 1;
     border-radius: 50%;
-    background-color: lightblue;
+    background-color: var(--secondary-color);
     padding: 8px;
 }
 
@@ -102,4 +99,29 @@ svg{
 
 footer svg{
     width: 20px;
+}
+
+.swiper{
+    max-width: 880px !important;
+}
+
+.swiper-slide{
+    width: 280px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    color: var(--primary-color);
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--primary-color);
+}
+
+.services-hero{
+    background-image: url(./../images/service-bg.jpg);
+}
+
+.bg-primary{
+    background-color: var(--primary-color);
 }

@@ -3,6 +3,7 @@ import BarsIcon from './../icons/BarsIcon';
 import CloseIcon from './../icons/CloseIcon';
 import { useState, useEffect } from "react";
 import Navbar from './Navbar';
+import logo from './../../assets/images/logo.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,18 +32,18 @@ const Header = () => {
                     {isOpen ? <CloseIcon color="#000" /> : <BarsIcon color="#000" />}
                 </div>
 
-                <Link to='/' className="text-2xl font-semibold select-none" style={{color: "var(--primary-color)"}}>تطبيق ديجيتال</Link>
+                <Link to='/' className="select-none">
+                    <img src={logo} alt="" className="w-25" />
+                </Link>
 
                 <nav>
                     <Navbar />
                 </nav>
-
-                <a href="#" className="btn">تحميل التطبيق</a>
             </header>
 
             {
                 isOpen ? 
-                <aside className="flex flex-col g-2 shadow-lg fixed top-16 w-full bg-white">
+                <aside className="flex flex-col g-2 shadow-lg fixed top-18 w-full bg-white">
                     <Navbar />
                 </aside> : ""
             }
