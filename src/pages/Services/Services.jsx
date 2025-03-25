@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Filters from "./components/Filters";
 import Sorting from "./components/Sorting";
 import ToolsGrid from "./components/ToolsGrid";
@@ -29,6 +29,10 @@ const Services = () => {
 
     const totalPages = Math.ceil(sortedTools.length / itemsPerPage);
     const displayedTools = sortedTools.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+    useEffect(() => {
+        document.title = 'خدماتنا | Our Services';
+    }, []);
 
     return (
         <>

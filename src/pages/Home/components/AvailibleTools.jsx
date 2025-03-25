@@ -27,17 +27,9 @@ const AvailibleTools = () => {
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentTools = tools.slice(indexOfFirstItem, indexOfLastItem);
 
-    const nextPage = () => {
-        if (currentPage < Math.ceil(tools.length / itemsPerPage)) {
-            setCurrentPage(currentPage + 1);
-        }
-    };
-
-    const prevPage = () => {
-        if (currentPage > 1) {
-            setCurrentPage(currentPage - 1);
-        }
-    };
+    // حساب عدد الصفحات
+    const totalPages = Math.ceil(tools.length / itemsPerPage);
+    const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
     return (
         <div className="p-10 flex items-center justify-center w-full">
@@ -59,21 +51,24 @@ const AvailibleTools = () => {
                     )
                 }
 
-                <div className="flex w-full justify-around items-center flex-wrap">
+                <div className="flex w-full justify-center items-center flex-wrap gap-2">
                     <Link className="btn" to='/services/'>عرض الكل</Link>
 
-                    {/* أزرار الـ pagination */}
-                    <div className="flex gap-4">
-                        <button onClick={prevPage} disabled={currentPage === 1} className={`btn ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}>
-                            السابق
-                        </button>
-                        <span className="text-lg font-semibold">
-                            {currentPage} / {Math.ceil(tools.length / itemsPerPage)}
-                        </span>
-                        <button onClick={nextPage} disabled={currentPage === Math.ceil(tools.length / itemsPerPage)} className={`btn ${currentPage === Math.ceil(tools.length / itemsPerPage) ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}>
-                            التالي
-                        </button>
+                    <span>|</span>
+                    {/* 🔹 أزرار الترقيم للـ pagination */}
+                    <div className="flex gap-2">
+                        {pageNumbers.map((number) => (
+                            <button
+                                key={number}
+                                onClick={() => setCurrentPage(number)}
+                                className={`w-10 h-10 flex items-center justify-center rounded-md text-lg font-semibold transition 
+                                ${currentPage === number ? "bg-primary text-white cursor-pointer" : "bg-gray-200 btn-hover-primary hover:text-white cursor-pointer"}`}
+                            >
+                                {number}
+                            </button>
+                        ))}
                     </div>
+
                 </div>
             </div>
         </div>

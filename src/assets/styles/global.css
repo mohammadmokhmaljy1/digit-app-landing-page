@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-*{transition: all 0.3s;}
+*{transition: all 0.2s;}
 
 :root {
     --primary-color: #EDB702;
@@ -124,4 +124,13 @@ footer svg{
 
 .bg-primary{
     background-color: var(--primary-color);
+}
+
+.btn-hover-primary:hover{
+    background-color: var(--primary-color);
+    filter: brightness(80%);
+}
+
+input[type="radio"]:has:checked {
+    background-color: red;
 }
