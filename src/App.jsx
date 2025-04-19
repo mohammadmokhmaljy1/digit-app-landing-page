@@ -17,7 +17,6 @@ const App = () => {
         return () => clearTimeout(timer);
     }, []);
 
-
     return (
         <>
             <Router>

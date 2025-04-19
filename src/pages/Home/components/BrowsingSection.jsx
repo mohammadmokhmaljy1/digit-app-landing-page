@@ -49,12 +49,10 @@ const BrowsingSection = () => {
             >
                 {
                     images && images.map((image, index) =>
-                        <>
-                            <SwiperSlide className='w-70 cursor-grab active:cursor-grabbing' key={index}>
-                                <img src={image.image} alt={image.desc} draggable="false" className='w-full rounded-xl' />
-                            </SwiperSlide>
-                        </>
-                    )
+                        <SwiperSlide className='w-70 cursor-grab active:cursor-grabbing' key={index}>
+                            <img src={image.image} alt={image.desc} draggable="false" className='w-full rounded-xl' />
+                        </SwiperSlide>
+                    )                    
                 }
             </Swiper>
 
