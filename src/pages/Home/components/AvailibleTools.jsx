@@ -37,6 +37,7 @@ const AvailibleTools = () => {
                     currentTools.map((item) =>
                         <ToolCard
                             key={item.id}
+                            id={item.id}
                             name={item.name}
                             category={item.category?.name} // استخراج اسم الفئة
                             year={new Date(item.relesed_date).getFullYear()} // استخراج السنة من تاريخ الإصدار
