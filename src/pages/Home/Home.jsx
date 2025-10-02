@@ -13,6 +13,7 @@ const Home = () => {
         <>
         <h1>افضل شركة للشاحنات</h1>
         <h1> hgahpkhj</h1>
+        <h2> خدمة متوفرة على مدار الساعة </h2>
             <HeroSection />
             <ChoosenSection />
             <AvailibleTools />
