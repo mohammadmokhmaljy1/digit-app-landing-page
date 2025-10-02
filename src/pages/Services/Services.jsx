@@ -66,7 +66,7 @@ const Services = () => {
     return (
         <>
             <div className="services-hero min-h-100 w-full flex items-center justify-center bg-cover bg-top">
-                <h1 className="text-bold text-3xl">خدماتنا - Our Services</h1>
+                <h1 className="text-bold text-3xl">خدم_اتنا - Our Services</h1>
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 p-12 pt-10">
