@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <>
             <HeroSection />
-            <ChoosenSection />
+           
             <AvailibleTools />
             <BrowsingSection />
         </>
