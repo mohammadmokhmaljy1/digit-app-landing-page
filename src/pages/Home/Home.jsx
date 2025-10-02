@@ -11,8 +11,10 @@ const Home = () => {
 
     return (
         <>
+        <h1> amina naaso welcome in github </h1>
+        <p>hiii</p>
             <HeroSection />
-           
+            <ChoosenSection />
             <AvailibleTools />
             <BrowsingSection />
         </>
