@@ -11,11 +11,12 @@ const Home = () => {
 
     return (
         <>
-                        <h1>عبدوو</h1>
+                       
 
         <h1>افضل شركة للشاحنات</h1>
         <h1> hgahpkhj</h1>
             <HeroSection />
+             <h1>عبدوو</h1>
             <ChoosenSection />
             <AvailibleTools />
             <BrowsingSection />
